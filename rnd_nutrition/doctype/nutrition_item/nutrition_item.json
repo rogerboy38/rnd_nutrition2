@@ -1,0 +1,161 @@
+{
+  "name": "Nutrition Item",
+  "doctype": "DocType",
+  "module": "rnd_nutrition",
+  "is_submittable": 0,
+  "autoname": "NUT-.#####",
+  "fields": [
+    {
+      "fieldname": "item_code",
+      "label": "Item Code",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "item_name",
+      "label": "Item Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "item_group",
+      "label": "Item Group",
+      "fieldtype": "Link",
+      "options": "Item Group",
+      "reqd": 1
+    },
+    {
+      "fieldname": "uom",
+      "label": "Unit of Measure",
+      "fieldtype": "Link",
+      "options": "UOM",
+      "reqd": 1
+    },
+    {
+      "fieldname": "standard_quantity",
+      "label": "Standard Quantity",
+      "fieldtype": "Float",
+      "default": 1
+    },
+    {
+      "fieldname": "macronutrients_section",
+      "label": "Macronutrients",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "calories",
+      "label": "Calories (kcal)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "protein",
+      "label": "Protein (g)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "carbohydrates",
+      "label": "Carbohydrates (g)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "sugars",
+      "label": "Sugars (g)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "dietary_fiber",
+      "label": "Dietary Fiber (g)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "fats_section",
+      "label": "Fats",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "total_fat",
+      "label": "Total Fat (g)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "saturated_fat",
+      "label": "Saturated Fat (g)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "trans_fat",
+      "label": "Trans Fat (g)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "micronutrients_section",
+      "label": "Micronutrients",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "vitamins_section",
+      "label": "Vitamins",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "vitamin_a",
+      "label": "Vitamin A (IU)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "vitamin_c",
+      "label": "Vitamin C (mg)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "minerals_section",
+      "label": "Minerals",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "calcium",
+      "label": "Calcium (mg)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "iron",
+      "label": "Iron (mg)",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "allergens_section",
+      "label": "Allergens",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "contains_gluten",
+      "label": "Contains Gluten",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "contains_dairy",
+      "label": "Contains Dairy",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "image",
+      "label": "Image",
+      "fieldtype": "Attach Image"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Additional Notes",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "links": [
+    {
+      "link_doctype": "Nutrition Recipe",
+      "link_fieldname": "nutrition_items"
+    }
+  ],
+  "naming_rule": "By fieldname",
+  "title_field": "item_name",
+  "search_fields": ["item_code", "item_name"]
+}

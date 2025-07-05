@@ -1,0 +1,34 @@
+{
+  "name": "Nutrition Recipe Item",
+  "doctype": "DocType",
+  "module": "rnd_nutrition",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "nutrition_item",
+      "label": "Nutrition Item",
+      "fieldtype": "Link",
+      "options": "Nutrition Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "quantity",
+      "label": "Quantity",
+      "fieldtype": "Float",
+      "reqd": 1,
+      "default": 1
+    },
+    {
+      "fieldname": "uom",
+      "label": "UOM",
+      "fieldtype": "Link",
+      "options": "UOM",
+      "reqd": 1
+    },
+    {
+      "fieldname": "notes",
+      "label": "Preparation Notes",
+      "fieldtype": "Text"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "name": "Nutrition Utils",
+  "doctype": "DocType",
+  "module": "rnd_nutrition",
+  "is_single": 1,
+  "autoname": "Nutrition Utils",
+  "fields": [
+    {
+      "fieldname": "default_uom",
+      "label": "Default Unit of Measure",
+      "fieldtype": "Link",
+      "options": "UOM",
+      "default": "g"
+    },
+    {
+      "fieldname": "default_serving_size",
+      "label": "Default Serving Size (g)",
+      "fieldtype": "Float",
+      "default": 100
+    },
+    {
+      "fieldname": "daily_values_section",
+      "label": "Daily Recommended Values",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "daily_calories",
+      "label": "Daily Calories (kcal)",
+      "fieldtype": "Int",
+      "default": 2000
+    },
+    {
+      "fieldname": "daily_protein",
+      "label": "Daily Protein (g)",
+      "fieldtype": "Int",
+      "default": 50
+    },
+    {
+      "fieldname": "daily_carbs",
+      "label": "Daily Carbohydrates (g)",
+      "fieldtype": "Int",
+      "default": 300
+    },
+    {
+      "fieldname": "daily_fat",
+      "label": "Daily Fat (g)",
+      "fieldtype": "Int",
+      "default": 65
+    },
+    {
+      "fieldname": "api_settings_section",
+      "label": "API Settings",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "enable_nutrition_api",
+      "label": "Enable Nutrition API",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "api_endpoint",
+      "label": "API Endpoint",
+      "fieldtype": "Data",
+      "depends_on": "eval:doc.enable_nutrition_api"
+    },
+    {
+      "fieldname": "api_key",
+      "label": "API Key",
+      "fieldtype": "Password",
+      "depends_on": "eval:doc.enable_nutrition_api"
+    }
+  ],
+  "naming_rule": "By fieldname",
+  "title_field": "name",
+  "show_title": 0
+}

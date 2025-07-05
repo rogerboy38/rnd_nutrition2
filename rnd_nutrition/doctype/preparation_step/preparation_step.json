@@ -1,0 +1,25 @@
+{
+  "name": "Preparation Step",
+  "doctype": "DocType",
+  "module": "rnd_nutrition",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "step_number",
+      "label": "Step",
+      "fieldtype": "Int",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Text",
+      "reqd": 1
+    },
+    {
+      "fieldname": "time_required",
+      "label": "Time Required (mins)",
+      "fieldtype": "Int"
+    }
+  ]
+}

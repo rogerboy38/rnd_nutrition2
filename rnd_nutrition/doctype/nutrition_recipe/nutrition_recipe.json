@@ -1,0 +1,95 @@
+{
+  "name": "Nutrition Recipe",
+  "doctype": "DocType",
+  "module": "rnd_nutrition",
+  "is_submittable": 1,
+  "autoname": "REC-.#####",
+  "fields": [
+    {
+      "fieldname": "recipe_name",
+      "label": "Recipe Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "preparation_time",
+      "label": "Preparation Time (mins)",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "cooking_time",
+      "label": "Cooking Time (mins)",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "servings",
+      "label": "Number of Servings",
+      "fieldtype": "Int",
+      "default": 1
+    },
+    {
+      "fieldname": "ingredients_section",
+      "label": "Ingredients",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "nutrition_items",
+      "label": "Nutrition Items",
+      "fieldtype": "Table",
+      "options": "Nutrition Recipe Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "instructions_section",
+      "label": "Instructions",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "preparation_steps",
+      "label": "Preparation Steps",
+      "fieldtype": "Table",
+      "options": "Preparation Step"
+    },
+    {
+      "fieldname": "nutritional_info_section",
+      "label": "Nutritional Information",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "total_calories",
+      "label": "Total Calories (kcal)",
+      "fieldtype": "Float",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_protein",
+      "label": "Total Protein (g)",
+      "fieldtype": "Float",
+      "read_only": 1
+    },
+    {
+      "fieldname": "image",
+      "label": "Recipe Image",
+      "fieldtype": "Attach Image"
+    },
+    {
+      "fieldname": "tags",
+      "label": "Tags",
+      "fieldtype": "Table",
+      "options": "Tag Link"
+    }
+  ],
+  "links": [
+    {
+      "link_doctype": "Meal Plan",
+      "link_fieldname": "recipes"
+    }
+  ],
+  "title_field": "recipe_name",
+  "search_fields": ["recipe_name"]
+}
