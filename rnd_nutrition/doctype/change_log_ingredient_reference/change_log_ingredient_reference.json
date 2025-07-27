@@ -1,0 +1,54 @@
+{
+    "doctype": "DocType",
+    "name": "Change Log Ingredient Reference",
+    "module": "RND Nutrition",
+    "istable": 1,
+    "custom": 1,
+    "fields": [
+        {
+            "fieldname": "ingredient",
+            "label": "Ingredient",
+            "fieldtype": "Link",
+            "options": "Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "ingredient_name",
+            "label": "Ingredient Name",
+            "fieldtype": "Data",
+            "fetch_from": "ingredient.item_name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "old_quantity",
+            "label": "Old Quantity",
+            "fieldtype": "Float",
+            "reqd": 1
+        },
+        {
+            "fieldname": "new_quantity",
+            "label": "New Quantity",
+            "fieldtype": "Float",
+            "reqd": 1
+        },
+        {
+            "fieldname": "uom",
+            "label": "Unit of Measure",
+            "fieldtype": "Link",
+            "options": "UOM",
+            "reqd": 1
+        },
+        {
+            "fieldname": "change_percentage",
+            "label": "Change Percentage",
+            "fieldtype": "Percent",
+            "read_only": 1,
+            "depends_on": "eval:doc.old_quantity && doc.new_quantity"
+        },
+        {
+            "fieldname": "reason",
+            "label": "Reason for Change",
+            "fieldtype": "Small Text"
+        }
+    ]
+}
