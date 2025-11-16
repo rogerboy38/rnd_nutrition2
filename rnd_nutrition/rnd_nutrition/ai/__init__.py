@@ -3,7 +3,7 @@ AI Integration Module for R&D Nutrition
 Leverages existing Raven/GPT infrastructure
 """
 
-__version__ = "2.0.0-alpha"
+__version__ = "2.0.0"
 
 class AIIntegration:
     """Main AI integration class"""
