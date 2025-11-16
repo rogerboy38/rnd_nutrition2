@@ -271,3 +271,25 @@ scheduler_events = {
         "rnd_nutrition.tasks.daily_nutrition_update"
     ]
 }
+
+# AI Integration Configuration
+# ----------------------------
+ai_config = {
+    "enabled": True,
+    "raven_integration": True,
+    "vector_database": "weaviate",
+    "feature_flags": {
+        "ai_recommendations": False,
+        "predictive_analytics": False,
+        "conversational_ai": False,
+        "vector_search": False,
+        "auto_formulation": False
+    }
+}
+
+# AI Boot Initialization
+def get_bootinfo(bootinfo):
+    """Add AI configuration to bootinfo"""
+    from rnd_nutrition.ai.feature_flags import ai_feature_flags
+    bootinfo.ai_features = ai_feature_flags.get_status()
+    bootinfo.ai_enabled = True
