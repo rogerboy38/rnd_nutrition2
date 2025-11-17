@@ -30,6 +30,7 @@
 # Includes in <body>
 app_include_js = [
     "/assets/rnd_nutrition/js/rnd_nutrition/bundle.js"
+]
 app_include_css = [
     "/assets/rnd_nutrition/css/rnd_nutrition/bundle.css"
 ]
