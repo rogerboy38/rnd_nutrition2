@@ -1,0 +1,97 @@
+/**
+ * RND Nutrition Styles Bundle
+ * Auto-generated to resolve 404 errors
+ */
+
+/* Nutrition-specific styles */
+.rnd-nutrition-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.rnd-nutrition-value {
+    font-weight: bold;
+    color: #2e7d32;
+    font-size: 1.1em;
+}
+
+.rnd-nutrition-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.rnd-nutrition-success {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Form styling for nutrition doctypes */
+.form-group[data-fieldtype="Float"] .control-input {
+    position: relative;
+}
+
+.form-group[data-fieldtype="Float"] .control-input::after {
+    content: "g";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+/* Nutrition dashboard widgets */
+.nutrition-widget {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    background: #f8f9fa;
+}
+
+.nutrition-widget .widget-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+/* Responsive design for nutrition data tables */
+@media (max-width: 768px) {
+    .nutrition-data-table {
+        font-size: 0.9em;
+    }
+    
+    .nutrition-data-table th,
+    .nutrition-data-table td {
+        padding: 4px 8px;
+    }
+}
+
+/* Custom icons and indicators */
+.nutrition-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.nutrition-indicator.good {
+    background-color: #28a745;
+}
+
+.nutrition-indicator.warning {
+    background-color: #ffc107;
+}
+
+.nutrition-indicator.critical {
+    background-color: #dc3545;
+}
