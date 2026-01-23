@@ -12,7 +12,7 @@ NC='\033[0m'
 
 # Configuration
 REMOTE="${GIT_REMOTE:-origin}"
-REPO_URL="${GIT_REMOTE_URL:-git@github.com:rogerboy38/rnd_nutrition.git}"
+REPO_URL="${GIT_REMOTE_URL:-git@github.com:rogerboy38/rnd_nutrition2.git}"
 SCRIPT_VERSION="1.0.0"
 
 print_status() { echo -e "${BLUE}➤${NC} $1"; }
@@ -27,7 +27,7 @@ show_header() {
     echo "║                        Version $SCRIPT_VERSION                         ║"
     echo "╚══════════════════════════════════════════════════════════════╝"
     echo -e "${NC}"
-    echo "Repository: https://github.com/rogerboy38/rnd_nutrition"
+    echo "Repository: https://github.com/rogerboy38/rnd_nutrition2"
     echo "Current Branch: $(git branch --show-current 2>/dev/null || echo 'unknown')"
     echo "================================================================"
 }
