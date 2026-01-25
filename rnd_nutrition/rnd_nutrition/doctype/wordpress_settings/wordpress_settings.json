@@ -1,0 +1,49 @@
+{
+    "name": "WordPress Settings",
+    "doctype": "DocType",
+    "module": "rnd_nutrition",
+    "issingle": 1,
+    "is_submittable": 0,
+    "fields": [
+        {
+            "fieldname": "site_url",
+            "label": "WordPress Site URL",
+            "fieldtype": "Data",
+            "reqd": 1,
+            "description": "e.g., https://yourblog.com"
+        },
+        {
+            "fieldname": "username",
+            "label": "Username",
+            "fieldtype": "Data",
+            "reqd": 1
+        },
+        {
+            "fieldname": "app_password",
+            "label": "Application Password",
+            "fieldtype": "Password",
+            "reqd": 1,
+            "description": "Generate from WordPress Admin > Users > Application Passwords"
+        },
+        {
+            "fieldname": "default_status",
+            "label": "Default Post Status",
+            "fieldtype": "Select",
+            "options": "draft\npublish\npending",
+            "default": "draft"
+        },
+        {
+            "fieldname": "default_category",
+            "label": "Default Category ID",
+            "fieldtype": "Int"
+        }
+    ],
+    "permissions": [
+        {
+            "role": "System Manager",
+            "read": 1,
+            "write": 1,
+            "create": 1
+        }
+    ]
+}
