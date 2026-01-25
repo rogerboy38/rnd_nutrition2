@@ -269,5 +269,19 @@ doc_events = {
 scheduler_events = {
     "daily": [
         "rnd_nutrition.tasks.daily_nutrition_update"
+    ],
+    "hourly": [
+        "rnd_nutrition.rnd_nutrition.doctype.blog_content.blog_content.sync_scheduled_posts"
     ]
 }
+
+# Raven AI Agent Tools Registration
+# Import tools when Raven AI Agent is available
+try:
+    from rnd_nutrition.rnd_nutrition.raven_tools import (
+        WordPressPublishTool,
+        WordPressUpdateTool,
+        BlogContentSearchTool
+    )
+except ImportError:
+    pass  # Raven AI Agent not installed
