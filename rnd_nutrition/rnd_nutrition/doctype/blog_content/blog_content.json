@@ -1,0 +1,64 @@
+{
+    "name": "Blog Content",
+    "doctype": "DocType",
+    "module": "rnd_nutrition",
+    "autoname": "BLOG-.#####",
+    "is_submittable": 0,
+    "fields": [
+        {
+            "fieldname": "title",
+            "label": "Title",
+            "fieldtype": "Data",
+            "reqd": 1
+        },
+        {
+            "fieldname": "topic",
+            "label": "Topic",
+            "fieldtype": "Select",
+            "options": "Acemannan Overview\nWound Healing\nImmune Health\nGut Health\nSkin Health\nAnti-inflammatory\nDigestive Support\nOral Health"
+        },
+        {
+            "fieldname": "content",
+            "label": "Content",
+            "fieldtype": "Text Editor"
+        },
+        {
+            "fieldname": "schema_markup",
+            "label": "Schema Markup",
+            "fieldtype": "Code",
+            "options": "JSON"
+        },
+        {
+            "fieldname": "meta_description",
+            "label": "Meta Description",
+            "fieldtype": "Small Text"
+        },
+        {
+            "fieldname": "keywords",
+            "label": "Keywords",
+            "fieldtype": "Data"
+        },
+        {
+            "fieldname": "wp_post_id",
+            "label": "WordPress Post ID",
+            "fieldtype": "Int",
+            "read_only": 1
+        },
+        {
+            "fieldname": "status",
+            "label": "Status",
+            "fieldtype": "Select",
+            "options": "Draft\nReady\nPublished",
+            "default": "Draft"
+        }
+    ],
+    "permissions": [
+        {
+            "role": "System Manager",
+            "read": 1,
+            "write": 1,
+            "create": 1,
+            "delete": 1
+        }
+    ]
+}
