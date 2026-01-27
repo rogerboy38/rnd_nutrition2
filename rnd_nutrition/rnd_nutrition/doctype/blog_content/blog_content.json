@@ -45,11 +45,45 @@
             "read_only": 1
         },
         {
+            "fieldname": "wordpress_url",
+            "label": "WordPress URL",
+            "fieldtype": "Data",
+            "read_only": 1
+        },
+        {
+            "fieldname": "published_on_wordpress",
+            "label": "Published on WordPress",
+            "fieldtype": "Check",
+            "read_only": 1
+        },
+        {
             "fieldname": "status",
             "label": "Status",
             "fieldtype": "Select",
             "options": "Draft\nReady\nPublished",
             "default": "Draft"
+        }
+    ],
+    "custom_buttons": [
+        {
+            "label": "Publish to WordPress",
+            "type": "button",
+            "action": "rnd_nutrition.rnd_nutrition.doctype.blog_content.blog_content.publish_to_wordpress",
+            "condition": "eval:!doc.published_on_wordpress",
+            "group": "Publish"
+        },
+        {
+            "label": "Update WordPress Post",
+            "type": "button",
+            "action": "rnd_nutrition.rnd_nutrition.doctype.blog_content.blog_content.update_wordpress_post",
+            "condition": "eval:doc.published_on_wordpress",
+            "group": "Publish"
+        },
+        {
+            "label": "Get WordPress Categories",
+            "type": "button",
+            "action": "rnd_nutrition.rnd_nutrition.doctype.blog_content.blog_content.get_wordpress_categories",
+            "group": "Publish"
         }
     ],
     "permissions": [
