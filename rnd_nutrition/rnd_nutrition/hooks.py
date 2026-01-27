@@ -43,7 +43,9 @@
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Blog Content": "public/js/doctype/blog_content.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -269,19 +271,5 @@ doc_events = {
 scheduler_events = {
     "daily": [
         "rnd_nutrition.tasks.daily_nutrition_update"
-    ],
-    "hourly": [
-        "rnd_nutrition.rnd_nutrition.doctype.blog_content.blog_content.sync_scheduled_posts"
     ]
 }
-
-# Raven AI Agent Tools Registration
-# Import tools when Raven AI Agent is available
-try:
-    from rnd_nutrition.rnd_nutrition.raven_tools import (
-        WordPressPublishTool,
-        WordPressUpdateTool,
-        BlogContentSearchTool
-    )
-except ImportError:
-    pass  # Raven AI Agent not installed
