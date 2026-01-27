@@ -43,6 +43,11 @@ class WordPressAPI:
         url = f"{self.api_url}/{endpoint}"
         headers = {
             "Content-Type": "application/json",
+			            "Accept": "application/json, text/plain, */*",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "X-Requested-With": "XMLHttpRequest",
+            "Origin": self.base_url,
+            "Referer": f"{self.base_url}/wp-admin/",
             **self.auth
         }
         
