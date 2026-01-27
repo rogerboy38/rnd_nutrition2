@@ -53,3 +53,46 @@ class BlogContent(Document):
             self.save()
             
         return result
+		
+    @frappe.whitelist()
+    def update_wordpress_post(docname, post_id=None, title=None, content=None):
+        """Update an existing WordPress post"""
+        try:
+            from rnd_nutrition.rnd_nutrition.wordpress_api import WordPressAPI
+            
+            wp = WordPressAPI()
+            doc = frappe.get_doc("Blog Content", docname)
+            
+            # Use provided post_id or get from document
+            post_id_to_update = post_id or doc.wp_post_id
+            
+            if not post_id_to_update:
+                return {
+                    "success": False,
+                    "message": "No WordPress post ID found. Publish the post first."
+                }
+            
+            result = wp.update_post(
+                post_id=int(post_id_to_update),
+                title=title or doc.title,
+                content=content or doc.content
+            )
+            
+            if result.get("success"):
+                return {
+                    "success": True,
+                    "message": f"? WordPress post updated successfully!"
+                }
+            else:
+                error_msg = result.get("error", "Unknown error")
+                return {
+                    "success": False,
+                    "message": f"Failed to update WordPress post: {error_msg}"
+                }
+                
+        except Exception as e:
+            frappe.log_error(frappe.get_traceback(), "WordPress Update Error")
+            return {
+                "success": False,
+                "message": f"Error updating WordPress post: {str(e)}"
+            }
