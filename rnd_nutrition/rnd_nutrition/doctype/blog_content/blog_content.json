@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "autoname": "BLOG-.#####",
+ "creation": "2026-07-28 13:53:45.258333",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "topic",
+  "content",
+  "schema_markup",
+  "meta_description",
+  "keywords",
+  "wp_post_id",
+  "wordpress_url",
+  "published_on_wordpress",
+  "status",
+  "wp_post_url",
+  "wp_edit_url"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Select",
+   "label": "Topic",
+   "options": "Acemannan Overview\nWound Healing\nImmune Health\nGut Health\nSkin Health\nAnti-inflammatory\nDigestive Support\nOral Health"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Text Editor",
+   "label": "Content"
+  },
+  {
+   "fieldname": "schema_markup",
+   "fieldtype": "Code",
+   "label": "Schema Markup",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "meta_description",
+   "fieldtype": "Small Text",
+   "label": "Meta Description"
+  },
+  {
+   "fieldname": "keywords",
+   "fieldtype": "Data",
+   "label": "Keywords"
+  },
+  {
+   "fieldname": "wp_post_id",
+   "fieldtype": "Int",
+   "label": "WordPress Post ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wordpress_url",
+   "fieldtype": "Data",
+   "label": "WordPress URL",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "published_on_wordpress",
+   "fieldtype": "Check",
+   "label": "Published on WordPress",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nReady\nPublished"
+  },
+  {
+   "fieldname": "wp_post_url",
+   "fieldtype": "Data",
+   "label": "WP Post URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "wp_edit_url",
+   "fieldtype": "Data",
+   "label": "WP Edit URL",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-07-28 13:53:46.630924",
+ "modified_by": "Administrator",
+ "module": "rnd_nutrition",
+ "name": "Blog Content",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
