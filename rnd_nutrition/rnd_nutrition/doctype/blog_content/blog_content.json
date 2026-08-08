@@ -62,6 +62,18 @@
             "fieldtype": "Select",
             "options": "Draft\nReady\nPublished",
             "default": "Draft"
+        },
+        {
+            "fieldname": "wp_post_url",
+            "label": "WP Post URL",
+            "fieldtype": "Data",
+            "read_only": 1
+        },
+        {
+            "fieldname": "wp_edit_url",
+            "label": "WP Edit URL",
+            "fieldtype": "Data",
+            "read_only": 1
         }
     ],
     "custom_buttons": [
